@@ -1,0 +1,23 @@
+<html>
+<head>
+<link href="tagcheck.css" type="text/css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="./tagcheck.jquery.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$().tagcheck({
+		iarea:"input-area",		//タグチェックを実行するテキストエリアのID
+		sout:"sourceCode",		//ソースコードを表示させる要素のID
+		eout:"errorList"		//エラー一覧を表示させる要素のID
+	});
+});
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<textarea rows="10" cols="30" id="input-area"></textarea>
+<div id="sourceCode"></div>
+<div id="errorList"></div>
+</body>
+</html>
