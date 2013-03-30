@@ -248,11 +248,10 @@ http://tockri.blog78.fc2.com/blog-entry-168.html
 			listHTML.push('</ol>');
 			return listHTML.join("");
 		}
-
-		// 入力対象エリアでキーボード操作時の動作
-		$('#' + options.iarea).keyup(function(){
-			checkCommon();
-		});
+		
+		$('#' + options.iarea).on('keyup mouseup paste', function(){
+				checkCommon();
+			});
 		
 		// 表示時の動作
 		$('html').load(function(){
@@ -285,6 +284,11 @@ http://tockri.blog78.fc2.com/blog-entry-168.html
 				// チェック結果の表示
 				var errorList = showList();
 				$('#' + options.eout).html(errorList);	
+			}else{
+				// ソースコードの表示
+				var sourceCode = showSourceCode(html);
+				$('#' + options.sout).html(sourceCode);
+				$('#' + options.eout).html('<p style="margin-left:23px">問題箇所はありません。</p>');
 			}
 		}
 

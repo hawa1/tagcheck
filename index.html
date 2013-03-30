@@ -1,9 +1,9 @@
-<html>
+<html lang="ja">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="tagcheck.css" type="text/css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="./tagcheck.jquery.js"></script>
-
 <script type="text/javascript">
 $(function(){
 	$().tagcheck({
@@ -13,11 +13,16 @@ $(function(){
 	});
 });
 </script>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>タグチェック</title>
 </head>
 <body>
-<textarea rows="10" cols="30" id="input-area"></textarea>
+<h1>Github</h1>
+<a href="https://github.com/hawa1/tagcheck">ここ</a>
+<h1>チェックするソースを入力</h1>
+<textarea id="input-area"></textarea>
+<h1>入力されたソース</h1>
 <div id="sourceCode"></div>
+<h1>発見された問題箇所</h1>
 <div id="errorList"></div>
 </body>
 </html>
